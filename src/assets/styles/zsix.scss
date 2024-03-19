@@ -1,0 +1,240 @@
+.container-component {
+  overflow: hidden;
+  // 填充式布局组件
+  .container-full {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .container-full__header {
+      padding: 20px;
+    }
+    .container-full__body {
+      flex-grow: 1;
+      height: 100%;
+      padding: 20px 20px;
+      overflow: auto;
+      position: relative;
+    }
+    .container-full__footer {
+      padding: 20px;
+    }
+  }
+  // 填充式布局组件 - 滚动优化
+  .container-full-bs {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .container-full-bs__header {
+      padding: 20px;
+    }
+    .container-full-bs__body {
+      flex-grow: 1;
+      overflow: hidden;
+      position: relative;
+      .container-full-bs__body-wrapper-inner {
+        padding: 20px;
+        position: relative;
+      }
+    }
+    .container-full-bs__footer {
+      padding: 20px;
+    }
+  }
+  // 隐形布局组件
+  .container-ghost {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .container-ghost__header {
+      padding: 20px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .container-ghost__body {
+      flex-grow: 1;
+      overflow: auto;
+      position: relative;
+    }
+    .container-ghost__footer {
+      padding: 20px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+  // 隐形布局组件 - 滚动优化
+  .container-ghost-bs {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .container-ghost-bs__header {
+      padding: 20px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .container-ghost-bs__body {
+      flex-grow: 1;
+      overflow: hidden;
+      position: relative;
+    }
+    .container-ghost-bs__footer {
+      padding: 20px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+  // 卡片式布局组件
+  .container-card {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .container-card__header {
+      padding: 20px;
+    }
+    .container-card__body {
+      flex-grow: 1;
+      overflow: auto;
+      .container-card__body-card {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+    .container-card__footer {
+      padding: 20px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+  // 卡片式布局组件 - 滚动优化
+  .container-card-bs {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .container-card-bs__header {
+      padding: 20px;
+    }
+    .container-card-bs__body {
+      position: relative;
+      flex-grow: 1;
+      overflow: hidden;
+      .container-card-bs__body-wrapper-inner {
+        padding-bottom: 20px;
+      }
+      .container-card-bs__body-card {
+        position: relative;
+        padding: 20px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+    .container-card-bs__footer {
+      padding: 20px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+}
+.theme-tab-container {
+  padding: 10px 20px 5px;
+  margin-bottom: 10px;
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    .name {
+      font-size: 16px;
+      // font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+      font-weight: 500;
+      // color: #4d4d4d;
+    }
+    .el-input {
+      width: 186px;
+    }
+  }
+  .card-box {
+    overflow-x: auto;
+    white-space: nowrap;
+    .card-content {
+      display: inline-block;
+      width: 226px;
+      height: 100px;
+      margin-right: 10px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 100px;
+      text-align: center;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &:hover,
+      &.is-active {
+        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.32),
+        0px 1px 4px 0px rgba(183, 183, 183, 0.06);
+      }
+    }
+    img {
+      cursor: pointer;
+      height: 100%;
+    }
+  }
+}
+.theme-main-container {
+  padding: 20px;
+}
+.card-box-empty {
+  background: rgba(0,0,0,.03);
+  height: 100px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  i {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  span {
+    font-size: 14px;
+  }
+}
+.el-button--medium{
+  padding: 10px;
+}
+.btn-danger{
+  color: #ff1818;
+}
